@@ -1,10 +1,19 @@
-import './App.css';
+import Home from "./Home";
+import GitProfile from "./GitProfile";
+import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <h1>Hello Github profile generator</h1>
-    </div>
+    <>
+  
+    <Router>
+      <Switch>
+      <Route exact path="/" component={Home}/>
+      <Route exact path="/" component={GitProfile}/>
+      </Switch>
+    </Router>
+    </>
+
   );
 }
 
